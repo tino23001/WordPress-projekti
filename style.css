@@ -15,9 +15,52 @@ Text Domain: qoechild
 Tags: blog, e-commerce, education, one-column, two-columns, three-columns, four-columns, wide-blocks, block-styles, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, 
 */
 
+
 body {
     font-family: 'Roboto Flex', 'Source Sans 3', sans-serif;
     background-color: #EFE6D4;
     margin: 0;
     padding: 0;
+
 }
+
+/* footerin alapuolella olevan alueen piilottaminen*/
+#back-to-top{
+    display: none;
+}
+
+/* YHTEYSTIEDOT-SIVU*/
+
+/* yhteystiedot (puhelin, osoite, aukioloajat)*/
+.contact-info{
+    color: #695858;
+}
+
+/* yhteystiedot-sivun otsikot*/
+.contact-heading{
+    color: #695858;
+}
+
+/* yhteydenottolomake*/
+input.ff-el-form-control{
+    height: 3.5em;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    margin-top: -5px;
+}
+/* yhteydenottolomakkeen nappi*/
+.ff-btn.ff-btn-submit.ff-btn-md.submit-button.ff_btn_style.wpf_has_custom_css{
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    width: 100%; /* Asettaa napin leveyden täyttämään koko vanhemman elementin leveyden */
+    box-sizing: border-box; /* Ottaa paddingin ja borderin huomioon leveydessä, jottei nappi "vuoda" yli */
+    margin-top: -5px; 
+}
+
+/* yhteydenottolomakkeen nappi hover-tilassa*/
+.ff-btn.ff-btn-submit.ff-btn-md.submit-button.ff_btn_style.wpf_has_custom_css:hover {
+    background-color:#333; /* Vaihda taustaväri hover-tilassa */
+    color: white; /* Vaihda tekstin väri hover-tilassa */
+    border-color: #333; /* Vaihda reunuksen väri hover-tilassa */
+}
+
