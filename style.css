@@ -1,21 +1,3 @@
-/*
-Theme Name: QoeChild
-Theme URI: 
-Author: Anttila Henna-Riina, Tuomenpuro Maisa, Valve Tino
-Author URI: 
-Description: LohikÃ¤rmes kauppa
-Requires at least: 6.0
-Tested up to: 6.4.3
-Requires PHP: 5.7
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Template: qoe
-Text Domain: qoechild
-Tags: blog, e-commerce, education, one-column, two-columns, three-columns, four-columns, wide-blocks, block-styles, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, full-site-editing, rtl-language-support, theme-options, threaded-comments, translation-ready, 
-*/
-
-
 body {
     font-family: 'Roboto Flex', 'Source Sans 3', sans-serif;
     background-color: #EFE6D4;
@@ -23,6 +5,51 @@ body {
     padding: 0;
 
 }
+/*ETUSIVU*/
+
+/*etusivun otsikko*/
+.front-page-heading{
+    color: #695858;
+}
+
+.wp-block-group.top-group {
+    max-width: none; /* Poistaa mahdollisen maksimileveyden rajoituksen */
+    width: 100%; /* Asettaa leveyden täyttämään käytettävissä olevan tilan */
+    margin: auto; /* Keskittää containerin, jos se ei ole jo keskitetty */
+    padding: 20px; /* Lisää paddingia containerin sisäpuolelle */
+}
+
+
+.wc-block-grid__products {
+    flex-wrap: nowrap; /* Estää elementtien siirtymisen uudelle riville */
+    padding: 0;
+
+}
+
+/* 'Top Rated Products' lohkon sisällä olevat tuotteet */
+.top-product .wc-block-grid__product {
+    border: 4px solid black; /*kehys */
+    padding: 15px; /* Sisäinen padding */
+    margin-bottom: 20px; /* Marginaali tuotekorttien välillä */
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Kevyt varjostus */
+    transition: box-shadow 0.3s ease; /* Siirtymä varjostukselle */
+    flex-basis: calc((100% - 20px * 2) / 3); /* Olettaen, että haluat 3 tuotetta rinnakkain ja 20px yhteismarginaali */
+    margin: 5px;
+    box-sizing: border-box;
+}
+.top-product .wc-block-grid__product:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Voimakkaampi varjostus hover-tilassa */
+}
+
+/* Lisätyyli tuotekuvalle */
+.top-product .wc-block-grid__product img {
+    border-radius: 5px; /* Pyöristetyt kulmat kuvalle */
+    max-width: 100%; /* Asettaa kuvan maksimileveydeksi 100% containerinsa leveydestä */
+    height: auto; /* Säilyttää kuvan mittasuhteet */
+    border: 2px solid #9B968E;
+}
+
 /*Etusivun ja kaupan napit*/
 .wp-block-button__link.wp-element-button.add_to_cart_button.ajax_add_to_cart {
     background-color: #333; /* Taustaväri */
@@ -36,7 +63,20 @@ body {
     background-color: #333; /* Taustavärin muutos, kun hiiri on elementin päällä */
 }
 
+/*KAUPPA*/
 
+.product-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 4px solid black; /* Kehyksen väri ja paksuus */
+    padding: 20px;
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjostus */
+    margin: 10px;
+    background-color: transparent; /* Taustaväri */   
+}
 
 /*BLOGI*/
 .blog_images img{
@@ -113,7 +153,7 @@ input.ff-el-form-control{
 .components-button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained:hover {
     background-color: #333; /* Napin taustaväri hover-tilassa */
 }
-
+/* näytä ostoskori -nappi */
 .components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-cart-button-block.wc-block-mini-cart__footer-cart.outlined {
     background-color: transparent; /* Läpinäkyvä tausta */
     color: #333333; /* Napin tekstin väri */
