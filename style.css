@@ -23,6 +23,15 @@ body {
 
 }
 
+header {
+    position: -webkit-sticky; /* Safari-selaimille */
+    position: sticky;
+    top: 0; /* Asettaa ylätunnisteen kiinni sivun yläreunaan */
+    z-index: 1000; /* Varmistaa, että ylätunniste on muiden elementtien päällä */
+    background-color: #fff; 
+}
+
+
 .home-logo {
     margin: 0.4em;
     font-family: "Snippet";
