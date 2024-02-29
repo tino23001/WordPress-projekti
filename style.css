@@ -22,7 +22,6 @@ body {
     padding: 0;
 
 }
-
 header {
     position: -webkit-sticky; /* Safari-selaimille */
     position: sticky;
@@ -30,7 +29,6 @@ header {
     z-index: 1000; /* Varmistaa, että ylätunniste on muiden elementtien päällä */
     background-color: #fff; 
 }
-
 
 .home-logo {
     margin: 0.4em;
@@ -66,14 +64,20 @@ header {
     padding: 0;
 
 }
+/*etusivun nappi*/
+.wp-block-button__link.wp-element-button {
+    background-color: #333; /* Napin taustaväri */
+    color: #ffffff; /* Napin tekstin väri */
+    border-radius: 10px; /* Reunuksen pyöristys */
 
+}
 /* 'Top Rated Products' lohkon sisällä olevat tuotteet */
 .top-product .wc-block-grid__product {
     border: 4px solid black; /*kehys */
     padding: 15px; /* Sisäinen padding */
     margin-bottom: 20px; /* Marginaali tuotekorttien välillä */
     border-radius: 10px; /* Pyöristetyt kulmat */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Kevyt varjostus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjostus */
     transition: box-shadow 0.3s ease; /* Siirtymä varjostukselle */
     flex-basis: calc((100% - 20px * 2) / 3); /* Olettaen, että haluat 3 tuotetta rinnakkain ja 20px yhteismarginaali */
     margin: 5px;
@@ -108,11 +112,11 @@ header {
 
 /* Reunukset*/
 .wp-block-post.type-product {
-    border: 4px solid black; /* Muuta arvoja tarpeesi mukaan */
-    padding: 20px; /* Muuta tämä arvo jos haluat lisää tilaa kuvan ja reunuksen välille */
-    border-radius: 10px; /* Pyöristetyt kulmat */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lisää varjostus tarvittaessa */
-    margin-bottom: 20px; /* Lisää ulkotilaa elementtien alapuolelle */
+    border: 4px solid black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px; 
 }
 
 /* Tuotekortin kuva */
@@ -126,10 +130,15 @@ header {
 
 .product-info {
     border: 4px solid black; /* Kehyksen väri ja paksuus */
-    padding: 20px; /* Sisätila sisällön ja reunuksen välillä */
+    padding: 5vh; /* Sisätila sisällön ja reunuksen välillä */
     border-radius: 10px; /* Pyöristetyt kulmat */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjostus */
     margin: 20px; /* Lisää ulkotilaa elementin ympärille */
+}
+
+.product-picture{
+    border-radius: 2px;
+    border: 2px solid #9B968E;
 }
 
 
@@ -145,6 +154,7 @@ header {
     background-color: #333; /* Napin taustaväri hover-tilassa */
 }
 
+
 /*BLOGI*/
 .blog_images img{
     border: 2px solid #9B968E !important;
@@ -154,7 +164,6 @@ header {
     z-index: 1 !important;
     border-style: inset !important;
 }
-
 
 .product-group{
     display: flex;
@@ -169,9 +178,76 @@ header {
     background-color: transparent; /* Taustaväri */   
 }
 
+
+
 /* footerin alapuolella olevan alueen piilottaminen*/
 #back-to-top{
     display: none;
+}
+
+/* CHECK-OUT -sivu*/
+
+.components-button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained {
+    background-color: #333; /* Napin taustaväri */
+    color: #ffffff; /* Napin tekstin väri */
+    border-radius: 10px; /* Reunuksen pyöristys */
+    transition: background-color 0.3s, transform 0.3s; /* Siirtymäefektit taustavärille ja muunnokselle */
+}
+
+/* hover-tila */
+.components-button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained:hover {
+    background-color: #333; /* Napin taustaväri hover-tilassa */
+}
+
+/* lisää kuponki kassalla -nappi */
+
+.components-button.wc-block-components-button.wp-element-button.wc-block-components-totals-coupon__button.contained {
+    background-color: #333; /* Sininen tausta */
+    color: #FFF; /* Valkoinen teksti */
+    border-radius: 10px; /* Reunuksen pyöristys */
+
+}
+/*CART-SIVU */
+
+
+
+.wc-block-components-button, .wp-element-button, .wc-block-cart__submit-button.contained {
+    background-color: #333; /* Sininen tausta */
+    color: #FFF; /* Valkoinen teksti */
+    border-radius: 10px; /* Reunuksen pyöristys */
+}
+
+/*OSTOSKORI SIVUPALKISSA*/
+
+.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-checkout-button-block.wc-block-mini-cart__footer-checkout.contained {
+    background-color: #333; /* Muuttaa napin taustavärin */
+    color: #ffffff; /* Muuttaa napin tekstin värin */
+    border-radius: 10px; /* Reunuksen pyöristys */
+}
+/* Hover-tila*/
+.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-checkout-button-block.wc-block-mini-cart__footer-checkout.contained:hover {
+    background-color: #333; /* Muuttaa napin taustavärin kun hiiri on sen päällä */
+}
+
+/* näytä ostoskori -nappi */
+.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-cart-button-block.wc-block-mini-cart__footer-cart.outlined {
+    background-color: transparent; /* Läpinäkyvä tausta */
+    color: #333333; /* Napin tekstin väri */
+    transition: all 0.3s ease; /* Siirtymäefektit */
+    border-radius: 10px; /* Reunuksen pyöristys */
+}
+
+.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-cart-button-block.wc-block-mini-cart__footer-cart.outlined:hover {
+    background-color: #333; /* Tummennettu tausta hover-tilassa */
+    color: #ffffff; /* Valkoinen teksti hover-tilassa */
+    border-color: #333; /* Tummennettu reunus hover-tilassa */
+}
+
+/*start shopping -nappi kun ostoskori on tyhjä */
+.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-shopping-button-block.wp-block-button__link.wc-block-mini-cart__shopping-button.contained {
+    background-color: #333; /* Sininen tausta */
+    color: #FFF; /* Valkoinen teksti */
+    border-radius: 10px; /* Reunuksen pyöristys */
 }
 
 /* YHTEYSTIEDOT-SIVU*/
@@ -207,66 +283,4 @@ input.ff-el-form-control{
     background-color:#333; /* Vaihda taustaväri hover-tilassa */
     color: white; /* Vaihda tekstin väri hover-tilassa */
     border-color: #333; /* Vaihda reunuksen väri hover-tilassa */
-
-/* muita nappeja joiden css-luokkaa ei pystynyt vaihtamaan*/
-}
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-checkout-button-block.wc-block-mini-cart__footer-checkout.contained {
-    background-color: #333; /* Muuttaa napin taustavärin */
-    color: #ffffff; /* Muuttaa napin tekstin värin */
-    border-radius: 10px; /* Reunuksen pyöristys */
-}
-/* Hover-tila*/
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-checkout-button-block.wc-block-mini-cart__footer-checkout.contained:hover {
-    background-color: #333; /* Muuttaa napin taustavärin kun hiiri on sen päällä */
-}
-
-.components-button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained {
-    background-color: #333; /* Napin taustaväri */
-    color: #ffffff; /* Napin tekstin väri */
-    border-radius: 10px; /* Reunuksen pyöristys */
-    transition: background-color 0.3s, transform 0.3s; /* Siirtymäefektit taustavärille ja muunnokselle */
-}
-
-/* hover-tila */
-.components-button.wc-block-components-button.wp-element-button.wc-block-components-checkout-place-order-button.contained:hover {
-    background-color: #333; /* Napin taustaväri hover-tilassa */
-}
-/* näytä ostoskori -nappi */
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-cart-button-block.wc-block-mini-cart__footer-cart.outlined {
-    background-color: transparent; /* Läpinäkyvä tausta */
-    color: #333333; /* Napin tekstin väri */
-    transition: all 0.3s ease; /* Siirtymäefektit */
-    border-radius: 10px; /* Reunuksen pyöristys */
-}
-
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-cart-button-block.wc-block-mini-cart__footer-cart.outlined:hover {
-    background-color: #333; /* Tummennettu tausta hover-tilassa */
-    color: #ffffff; /* Valkoinen teksti hover-tilassa */
-    border-color: #333; /* Tummennettu reunus hover-tilassa */
-}
-
-/* lisää kuponki kassalla -nappi */
-
-.components-button.wc-block-components-button.wp-element-button.wc-block-components-totals-coupon__button.contained {
-    background-color: #333; /* Sininen tausta */
-    color: #FFF; /* Valkoinen teksti */
-    border-radius: 10px; /* Reunuksen pyöristys */
-    transition: background-color 0.3s, transform 0.3s; /* Siirtymäefektit taustavärille ja muunnokselle */
-}
-    
-
-/*hover-tila */
-.components-button.wc-block-components-button.wp-element-button.wc-block-components-totals-coupon__button.contained:hover {
-    background-color: #333; /* Napin taustaväri hover-tilassa */
-}
-/*start shopping -nappi kun ostoskori on tyhjä */
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-shopping-button-block.wp-block-button__link.wc-block-mini-cart__shopping-button.contained {
-    background-color: #333; /* Sininen tausta */
-    color: #FFF; /* Valkoinen teksti */
-    border-radius: 10px; /* Reunuksen pyöristys */
-    transition: background-color 0.3s, transform 0.3s; /* Siirtymäefektit taustavärille ja muunnokselle */
-}
-/*hover-tila */
-.components-button.wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-shopping-button-block.wp-block-button__link.wc-block-mini-cart__shopping-button.contained:hover {
-    background-color: #333; /* Napin taustaväri hover-tilassa */
 }
