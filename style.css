@@ -73,7 +73,7 @@ header {
 /* 'Top Rated Products' lohkon sisällä olevat tuotteet */
 .top-product .wc-block-grid__product {
     border: 4px solid black; /*kehys */
-    padding: 15px; /* Sisäinen padding */
+    padding: 15px !important; /* Sisäinen padding */
     margin-bottom: 20px; /* Marginaali tuotekorttien välillä */
     border-radius: 10px; /* Pyöristetyt kulmat */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Varjostus */
