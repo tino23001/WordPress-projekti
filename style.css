@@ -259,6 +259,12 @@ header {
     color: #FFF; /* Valkoinen teksti */
     border-radius: 10px; /* Reunuksen pyöristys */
 }
+/*tyhjän ostoskorin ehdottamien tuotteiden kuvien muotoilu*/
+.wp-block-woocommerce-empty-cart-block img {
+    margin: 0 0 12px;
+    border-radius: 5px;
+    border: 2px solid #9B968E;
+}
 
 /* YHTEYSTIEDOT-SIVU*/
 
