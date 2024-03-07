@@ -219,6 +219,24 @@ header {
 }
 /*CART-SIVU */
 
+/*tyhjän ostoskorin ehdottamien tuotteiden muotoilu*/
+.wc-block-grid__product {
+    border: 4px solid black; /*kehys */
+    padding: 15px; /* Sisäinen padding */
+    margin-bottom: 20px; /* Marginaali tuotekorttien välillä */
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 8px rgba(190, 83, 83, 0.2); /* Varjostus */
+    transition: box-shadow 0.3s ease; /* Siirtymä varjostukselle */
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/*tyhjän ostoskorin ehdottamien tuotteiden kuvien muotoilu*/
+.wp-block-woocommerce-empty-cart-block img {
+    margin: 0 0 12px;
+    border-radius: 5px;
+    border: 2px solid #9B968E;
+}
 
 
 .wc-block-components-button, .wp-element-button, .wc-block-cart__submit-button.contained {
@@ -259,12 +277,7 @@ header {
     color: #FFF; /* Valkoinen teksti */
     border-radius: 10px; /* Reunuksen pyöristys */
 }
-/*tyhjän ostoskorin ehdottamien tuotteiden kuvien muotoilu*/
-.wp-block-woocommerce-empty-cart-block img {
-    margin: 0 0 12px;
-    border-radius: 5px;
-    border: 2px solid #9B968E;
-}
+
 
 /* YHTEYSTIEDOT-SIVU*/
 
