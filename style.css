@@ -44,7 +44,7 @@ header {
 
 /*etusivun otsikko*/
 .front-page-heading{
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Source Sans 3';
     font-size: 40px;
     color: #695858;
     margin: 12px 4px;
